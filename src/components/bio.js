@@ -6,59 +6,25 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
 import { rhythm } from "../utils/typography"
 
 const Bio = () => {
-  const data = useStaticQuery(graphql`
-    query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-        childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      site {
-        siteMetadata {
-          author {
-            name
-            summary
-          }
-          social {
-            twitter
-          }
-        }
-      }
-    }
-  `)
-
-  const { author, social } = data.site.siteMetadata
   return (
-    <div
-      style={{
-        display: `flex`,
-        marginBottom: rhythm(2.5),
-      }}
-    >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author.name}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
-      />
-      <p>
-        Krok po kroku, od podstaw HTML, CSS aż do JavaScript. Naucz się kodować strony internetowe!
+    <div>
+      <p style={{
+        lineHeight: 1.5,
+        margin: `10px 0`,
+        display: `block`
+      }}>
+        Kodowanie jest proste! Naucz się tworzyć nowoczesne strony internetowe.
       </p>
+      <p
+        style={{
+          lineHeight: 1.5,
+          display: `block`
+        }}><strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> oraz <strong>JAMstack</strong>.</p>
     </div>
   )
 }
