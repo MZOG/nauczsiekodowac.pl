@@ -33,9 +33,6 @@ const SEO = ({ description, lang, meta, title, image, pathname }) => {
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
   const seoImage = image ? `${site.siteMetadata.siteUrl}${image}` : null
 
-  console.log(seoImage)
-  console.log(image)
-
   return (
     <Helmet
       htmlAttributes={{
@@ -88,7 +85,7 @@ const SEO = ({ description, lang, meta, title, image, pathname }) => {
         },
         {
           property: "og:image",
-          content: image,
+          content: seoImage,
         }
       ].concat(meta)}
     />
