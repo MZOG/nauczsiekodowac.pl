@@ -12,14 +12,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
   const image = post.frontmatter.image
-    ? post.frontmatter.image.childImageSharp.resize
+    ? post.frontmatter.image.childImageSharp.resize.src
     : null
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        description={post.frontmatter.description}
         image={image}
         pathname={post.fields.slug}
       />

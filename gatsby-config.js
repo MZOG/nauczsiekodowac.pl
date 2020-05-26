@@ -6,7 +6,7 @@ module.exports = {
       summary: `Programista Front End. JAMstack, JS, Gatsby.`,
     },
     description: `Naucz się podstaw kodowania. Stwórz swoją pierwszą stronę internetową z HTML, CSS i JavaScript.`,
-    siteUrl: `https://nauczsiekodowac.pl/`,
+    siteUrl: `https://nauczsiekodowac.pl`,
     social: {
       twitter: `zogrodnik_m`,
     },
