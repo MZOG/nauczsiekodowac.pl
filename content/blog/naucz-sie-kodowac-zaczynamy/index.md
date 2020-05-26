@@ -2,16 +2,20 @@
 title: Zaczynamy!
 date: "2020-05-25"
 description: Cześć! Nazywam się Marcin Zogrodnik i jestem Front End Developerem. Na tej stronie nauczysz się podstaw kodowania HTML, CSS oraz JavaScript.
+featured: featured.jpg
 ---
 
 ## Projekt naucz się kodować
+
 Chcesz tworzyć strony internetowe i nie wiesz jak zacząć?
 
 ---
 
 ## Dodaj wpis
+
 Dodaj wpis i pomóż innym nauczyć się więcej na temat kodowania stron internetowych.
 Dodanie wpisu jest bardzo proste! Kod strony **nauczsiekodowac.pl** jest dostępny na [GitHub](https://github.com/MZOG/nauczsiekodowac.pl) i możesz dodawać oraz edytować wpisy, wystarczy stworzyć **Pull Request**. Poradnik jak dodać wpis będzie dostępny w innym poście.
+
 ---
 
 ## Kim jestem?

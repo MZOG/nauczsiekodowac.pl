@@ -6,6 +6,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import { formatPostDate } from '../utils/helpers'
 
 type Data = {
   site: {
@@ -46,21 +47,19 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <article key={node.fields.slug}>
+          <article key={node.fields.slug} className="article-post">
             <header>
               <h2
                 style={{
                   ...scale(0.7),
                   marginBottom: rhythm(1 / 4),
-                  fontFamily: `Montserrat, sans-serif`,
-
                 }}
               >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   {title}
                 </Link>
               </h2>
-              <small>{node.frontmatter.date}</small>
+              <small>{formatPostDate(node.frontmatter.date, 'pl-pl')}</small>
             </header>
             <section>
               <p

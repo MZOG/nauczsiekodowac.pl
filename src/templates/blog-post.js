@@ -5,40 +5,54 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import { formatPostDate } from '../utils/helpers'
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+  const image = post.frontmatter.image
+    ? post.frontmatter.image.childImageSharp.resize
+    : null
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        image={image}
+        pathname={post.fields.slug}
       />
-      <article>
+      <article className="post">
         <header>
           <h1
             style={{
               marginTop: rhythm(1),
-              marginBottom: 0,
-
+              marginBottom: rhythm(2),
+              fontFamily: `inherit`,
+              ...scale(1.3),
             }}
+            className="post-title"
           >
             {post.frontmatter.title}
           </h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
-            }}
-          >
-            {post.frontmatter.date}
-          </p>
+
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
+
+        <div style={{ display: `flex`, justifyContent: `space-between`, marginTop: rhythm(1) }}>
+          <p
+            style={{
+              display: `block`,
+              marginBottom: rhythm(1),
+
+            }}
+          >
+            {formatPostDate(post.frontmatter.date, 'pl-pl')}
+          </p>
+
+          <p><a href={`https://github.com/MZOG/nauczsiekodowac.pl/tree/master/content/blog${post.fields.slug}index.md`}>Edytuj post</a></p>
+        </div>
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -49,7 +63,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </footer>
       </article>
 
-      <nav>
+      <nav className="post-next-prev">
         <ul
           style={{
             display: `flex`,
@@ -96,6 +110,18 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        image: featured {
+          childImageSharp {
+            resize(width: 1200) {
+              src
+              height
+              width
+            }
+          }
+        }
+      }
+      fields {
+        slug
       }
     }
   }

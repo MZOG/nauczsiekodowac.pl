@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import { rhythm, scale } from "../utils/typography"
+import "../assets/styles.scss"
+
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -11,9 +12,9 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h1
         style={{
-          ...scale(1.2),
           marginBottom: rhythm(1.5),
           marginTop: 0,
+          fontFamily: `inherit`
         }}
       >
         <Link
@@ -31,7 +32,6 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h2
         style={{
-          fontFamily: `Montserrat, sans-serif`,
           marginTop: 0,
         }}
       >
@@ -66,11 +66,7 @@ const Layout = ({ location, title, children }) => {
         }}>
         <p>© {new Date().getFullYear()} nauczsiekodowac.pl</p>
 
-        <p
-          style={{
-
-          }}
-        >
+        <p>
           <a href="https://marcinzogrodnik.pl">Marcin Zogrodnik</a> & <a href="https://www.gatsbyjs.org">Gatsby</a>
         </p>
       </footer>

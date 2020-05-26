@@ -1,0 +1,52 @@
+$primary-color: #214187;
+
+
+a {
+    color: $primary-color;
+    box-shadow: none;
+}
+
+.post {
+    &-title {
+        color: #214187;
+    }
+
+    a {
+        border-bottom: 1px dotted $primary-color;
+
+        &:hover {
+            background: rgba($primary-color, 0.1);
+            border-bottom-style: solid;
+        }
+    }
+}
+
+.article-post {
+    h2 {
+        a {
+            color: $primary-color;
+        }
+    }
+}
+
+.post-next-prev {
+    a {
+        border-bottom: 1px dotted $primary-color;
+
+        &:hover {
+            background: rgba($primary-color, 0.1);
+            border-bottom-style: solid;
+        }
+    }
+}
+
+footer {
+    a {
+        border-bottom: 1px dotted $primary-color;
+
+        &:hover {
+            background: rgba($primary-color, 0.1);
+            border-bottom-style: solid;
+        }
+    }
+}

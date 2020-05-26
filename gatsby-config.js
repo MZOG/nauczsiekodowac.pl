@@ -2,16 +2,17 @@ module.exports = {
   siteMetadata: {
     title: `Naucz się kodować`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Marcin Zogrodnik`,
+      summary: `Programista Front End. JAMstack, JS, Gatsby.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `Naucz się podstaw kodowania. Stwórz swoją pierwszą stronę internetową z HTML, CSS i JavaScript.`,
+    siteUrl: `https://nauczsiekodowac.pl/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `zogrodnik_m`,
     },
   },
   plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -53,15 +54,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-167756437-1`,
       },
     },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Naucz się kodować`,
+        short_name: `nauczsiekodowac`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
@@ -76,8 +77,5 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
