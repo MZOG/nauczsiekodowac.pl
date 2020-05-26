@@ -31,8 +31,10 @@ const SEO = ({ description, lang, meta, title, image, pathname }) => {
 
   const metaDescription = description || site.siteMetadata.description
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
+  const seoImage = image ? `${site.siteMetadata.siteUrl}${image}` : null
 
-  console.log(metaDescription)
+  console.log(seoImage)
+  console.log(image)
 
   return (
     <Helmet
