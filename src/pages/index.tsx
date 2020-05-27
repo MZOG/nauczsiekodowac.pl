@@ -51,7 +51,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
             <header>
               <h2
                 style={{
-                  ...scale(0.7),
+                  ...scale(0.4),
                   marginBottom: rhythm(1 / 4),
                 }}
               >

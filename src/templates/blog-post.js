@@ -30,7 +30,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginTop: rhythm(1),
               marginBottom: rhythm(2),
               fontFamily: `inherit`,
-              ...scale(1.3),
+              ...scale(0.8),
             }}
             className="post-title"
           >

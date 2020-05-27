@@ -37,6 +37,18 @@ a {
             
         }
     }
+
+    blockquote {
+        margin: 0;
+        background: rgba(#58cdf7, 0.2);
+        border: none;
+        color: rgba(#04516d, 1);
+        font-style: normal;
+        font-size: inherit;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: rgba(#04516d, 0.2) 0px 25px 45px -15px;
+    }
 }
 
 .article-post {
