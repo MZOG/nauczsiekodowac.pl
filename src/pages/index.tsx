@@ -46,6 +46,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
       />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
+        const date = formatPostDate(node.frontmatter.date, 'pl-pl')
         return (
           <article key={node.fields.slug} className="article-post">
             <header>
@@ -59,17 +60,22 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                   {title}
                 </Link>
               </h2>
-              <small>{formatPostDate(node.frontmatter.date, 'pl-pl')}</small>
+              <small>{date}</small>
             </header>
             <section>
               <p
                 style={{
                   marginTop: rhythm(1 / 2),
+                  fontSize: `14px`
                 }}
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
                 }}
               />
+
+              <Link style={{ boxShadow: `none`, fontSize: `14px` }} to={node.fields.slug}>
+                Więcej →
+              </Link>
             </section>
           </article>
         )

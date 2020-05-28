@@ -5,8 +5,6 @@ description: Podsumowanie miesiąca - Maj 2020. Najciekawsze wiadomości na tema
 featured: podsumowanie-miesiaca-maj-2020.png
 ---
 
-> Podsumowanie miesiąca to comiesięczny wpis z nowościami na temat Front End. *Większość linków zawiera tekst w języku Angielskim.*
-
 ## [Tetris w JavaScript](https://youtu.be/rAUn1Lom6dw)
 Prawie 2 godzinny materiał jak stworzyć popularną grę **Tetris** w JavaScript.
 

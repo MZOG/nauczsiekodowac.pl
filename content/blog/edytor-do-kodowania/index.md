@@ -23,5 +23,3 @@ tylko na edytorach tekstu.
 
 ### Visual Studio Code
 ![Visual Studio Code](vscode.jpg)
-
-> wip

@@ -28,7 +28,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <h1
             style={{
               marginTop: rhythm(1),
-              marginBottom: rhythm(2),
+              marginBottom: rhythm(0.8),
               fontFamily: `inherit`,
               ...scale(0.8),
             }}
@@ -37,24 +37,36 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             {post.frontmatter.title}
           </h1>
 
-        </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
 
-        <div style={{ display: `flex`, justifyContent: `space-between`, marginTop: rhythm(1) }}>
+        </header>
+        <div style={{
+          display: `flex`,
+          justifyContent: `space-between`,
+          fontSize: `14px`,
+        }} className="post-info">
           <p
             style={{
               display: `block`,
-              marginBottom: rhythm(1),
-
             }}
           >
             {formatPostDate(post.frontmatter.date, 'pl-pl')}
           </p>
 
-          <p><a href={`https://github.com/MZOG/nauczsiekodowac.pl/tree/master/content/blog${post.fields.slug}index.md`}>Edytuj post</a></p>
+          <p>
+            Udostępnij: {' '}
+            <a href={`https://www.facebook.com/sharer/sharer.php?u=https://nauczsiekodowac.pl${post.fields.slug}`} title="Share on Facebook">Facebook</a>, {' '}
+            <a href={`https://twitter.com/intent/tweet?text=${post.frontmatter.title}&amp;url=https://nauczsiekodowac.pl${post.fields.slug}&amp;via=zogrodnik_m`} title="Share on Twitter">Twitter</a>
+            {' '} / {' '}
+            <a href={`https://github.com/MZOG/nauczsiekodowac.pl/tree/master/content/blog${post.fields.slug}index.md`}>Edytuj post</a>
+          </p>
         </div>
+
+        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+
+
         <hr
           style={{
+            marginTop: rhythm(1),
             marginBottom: rhythm(1),
           }}
         />

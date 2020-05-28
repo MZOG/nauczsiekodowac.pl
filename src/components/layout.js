@@ -62,7 +62,8 @@ const Layout = ({ location, title, children }) => {
         style={{
           display: `flex`,
           justifyContent: `space-between`,
-          fontSize: `14px`
+          fontSize: `14px`,
+          marginTop: rhythm(1.5),
         }}>
         <p>© {new Date().getFullYear()} nauczsiekodowac.pl</p>
 

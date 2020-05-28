@@ -1,5 +1,13 @@
-$primary-color: #214187;
+$primary-color: #2660de;
+$black: #333;
 
+* {
+    font-family: 'Open Sans';
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Open Sans';
+}
 
 a {
     color: $primary-color;
@@ -7,18 +15,10 @@ a {
 }
 
 .post {
-    &-title {
-        color: #214187;
-
-        
-    }
-
     a {
-        border-bottom: 1px dotted $primary-color;
 
         &:hover {
             background: rgba($primary-color, 0.1);
-            border-bottom-style: solid;
         }
     }
 
@@ -54,11 +54,10 @@ a {
 .article-post {
     h2 {
         a {
-            color: $primary-color;
+            color: $black;
 
             &:hover {
-                border-bottom: 1px dotted $primary-color;
-                background: rgba($primary-color, 0.1);
+                color: $primary-color;
             }
         }
     }
@@ -66,22 +65,18 @@ a {
 
 .post-next-prev {
     a {
-        border-bottom: 1px dotted $primary-color;
 
         &:hover {
             background: rgba($primary-color, 0.1);
-            border-bottom-style: solid;
         }
     }
 }
 
 footer {
     a {
-        border-bottom: 1px dotted $primary-color;
 
         &:hover {
             background: rgba($primary-color, 0.1);
-            border-bottom-style: solid;
         }
     }
 }
