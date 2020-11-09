@@ -5,7 +5,6 @@ import { PageProps, Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
 import { formatPostDate } from '../utils/helpers'
 
 type Data = {
@@ -36,14 +35,9 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout title={siteTitle}>
       <SEO title="HTML, CSS, JavaScript" />
       <Bio />
-      <hr
-        style={{
-          marginBottom: rhythm(1),
-        }}
-      />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         const date = formatPostDate(node.frontmatter.date, 'pl-pl')
@@ -51,10 +45,6 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
           <article key={node.fields.slug} className="article-post">
             <header>
               <h2
-                style={{
-                  ...scale(0.4),
-                  marginBottom: rhythm(1 / 4),
-                }}
               >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   {title}
@@ -64,16 +54,12 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
             </header>
             <section>
               <p
-                style={{
-                  marginTop: rhythm(1 / 2),
-                  fontSize: `14px`
-                }}
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
                 }}
               />
 
-              <Link style={{ boxShadow: `none`, fontSize: `14px` }} to={node.fields.slug}>
+              <Link  to={node.fields.slug}>
                 Więcej →
               </Link>
             </section>

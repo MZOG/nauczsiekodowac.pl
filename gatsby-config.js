@@ -17,11 +17,19 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Open Sans`,
+            family: `Lato`,
             variants: [`400`, `500`, `700`],
-            "subsets": [
-              "latin-ext"
-            ]
+            subsets: ["latin-ext"]
+          },
+          {
+            family: `Montserrat`,
+            variants: [`400`, `500`, `700`, `900`, `900i`],
+            subsets: ["latin-ext"]
+          },
+          {
+            family: `Roboto Mono`,
+            variants: [`400`],
+            subsets: ["latin-ext"]
           },
         ],
       },
@@ -86,11 +94,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
   ],
 }

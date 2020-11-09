@@ -3,6 +3,10 @@ title: Podsumowanie miesiąca - Maj
 date: "2020-05-29"
 description: Podsumowanie miesiąca - Maj 2020. Najciekawsze wiadomości na temat Front End.
 featured: podsumowanie-miesiaca-maj-2020.png
+category: html
+tags: html
+author: "Marcin Zogrodnik"
+author_www: "https://marcinzogrodnik.pl"
 ---
 
 ## [Tetris w JavaScript](https://youtu.be/rAUn1Lom6dw)
@@ -14,9 +18,9 @@ uruchomieniowa dla JavaScript oraz TypeScript.
 
 ## [Next.js 9.4](https://nextjs.org/blog/next-9-4)
 Kolejne nowości od Next.js. W końcu przy większych projektach będzie można
-pozbyć się niewygodnego liczenia folderów, aby dostać się do innego pliku.            
+pozbyć się niewygodnego liczenia folderów, aby dostać się do innego pliku.
 ```import Button from '../../../../components/button'```
-W nowej wersji po zdeklarowaniu ```baseUrl``` będzie można użyć      
+W nowej wersji po zdeklarowaniu ```baseUrl``` będzie można użyć
 ```import Button from 'components/button'``` z każdego miejsca w projekcie.
 
 
